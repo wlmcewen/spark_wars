@@ -1,0 +1,48 @@
+<div>
+Logged in as: <%= @account.Name %>
+</div>
+
+<h2><%= @listing.ListingId %></h2>
+
+<div id="scene">
+
+
+<div id="textContainer">
+
+A long time ago
+
+in a galaxy far, far away
+
+in the city of <%= @listing.City %>
+
+there appeared an listing.
+
+<% unless @listing.photos.empty? %>
+<img id="listingphoto" src="<%= @listing.photos.first.UriThumb %>">
+<% end %>
+
+<ul>
+<% @listing.attributes["StandardFields"].keys.each do |key| %>
+  <% val = @listing.send(key) %>
+  <% unless key == "Photos" || val.blank? || val == '********' %>
+  <li><%= key %> - <%= val %></li>
+  <% end %>
+<% end %>
+</ul>
+
+
+<div id="theend">
+The End.
+
+<%= image_tag "spark-logo.png" %>
+</div>
+
+</div>
+
+</div>
+
+
+<audio id="song">
+  <source src="/theme.ogg" type="audio/ogg" />
+  Your browser does not support the audio element.
+</audio>

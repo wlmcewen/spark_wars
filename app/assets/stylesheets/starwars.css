@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+#scene {
+  height: 400px;
+  -webkit-perspective-origin: center top;
+  -webkit-perspective: 300px;
+}
+
+#textContainer {
+  color: yellow;
+  font-size: 40px;
+  font-weight: bold;
+  white-space: pre-line;
+  text-align: center;
+
+  margin-left: 30%;
+  margin-right: 30%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  
+  -webkit-transform: rotateX(45deg);
+}
+
+#content {
+  margin-top: 300px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  white-space: pre-line;
+  width: 100%;
+ 
+  position: absolute;
+  overflow: hidden;
+}
+
+#theend, #theend a {
+  font-size: 20px;
+  color: yellow;
+}

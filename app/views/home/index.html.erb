@@ -1,3 +1,11 @@
-Test
+<div>
+Logged in as: <%= @account.Name %>
+</div>
 
-<%= @account.inspect %>
+
+<h2>Listings</h2>
+<ul>
+<% @listings.each do |listing| %>
+  <li><%= link_to listing.ListingId, "/listings/#{listing.ListingKey}" %> - <%= listing.ListPrice %></li>
+<% end %>
+</ul>
