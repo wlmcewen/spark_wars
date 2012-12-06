@@ -1,0 +1,12 @@
+# Note, the redirect_uri will be build dynamically based on the current host name. Make sure this 
+# matches the redirect uri set for your OAuth2 key. 
+development: &defaults
+  user_agent:        'Spark Wars'
+  oauth2:            true
+  oauth2_provider:   '::OAuth2Provider'
+  authorization_uri: 'https://sparkplatform.com/oauth2'
+  access_uri:        'https://api.sparkplatform.com/v1/oauth2/grant'
+  redirect_uri:      ''
+  client_id:         'MY_OAUTH2_KEY'
+  client_secret:     'MY_OAUTH2_SECRET'
+  endpoint:          'https://api.sparkplatform.com'
